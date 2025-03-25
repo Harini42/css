@@ -1,0 +1,120 @@
+<html>
+<head>
+    <title>Museum Ticket Booking</title>
+</head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0; 
+            width: 100%;
+            height: 100vh;
+            font-family: Garamond, sans-serif;
+            background: url("museum.jpg") no-repeat center/cover;
+            background-attachment: fixed;
+            opacity: 0.4;
+           z-index: -1;
+          }
+
+body {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.booking-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    text-align: left;
+    margin-top: 10px;
+}
+
+input, select {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+   text-decoration: none;
+}
+
+button:hover {
+    background: #0056b3;
+}
+</style>
+<body>
+    <div class="booking-container">
+        <h2>Museum Ticket Booking</h2>
+        <form action="Book%20Now.html" method="post">
+            
+            <label for="museum">Choose a Museum:</label>
+            <select id="museum" name="museum">
+                <option value="National Museum, Delhi">National Museum, Delhi</option>
+                <option value="Indian Museum, Kolkata">Indian Museum, Kolkata</option>
+                <option value="Chhatrapati Shivaji Maharaj Vastu Sangrahalaya, Mumbai">Chhatrapati Shivaji Maharaj Vastu Sangrahalaya, Mumbai</option>
+                <option value="Salar Jung Museum, Hyderabad">Salar Jung Museum, Hyderabad</option>              
+                <option value="Visvesvaraya Industrial & Technological Museum, Bangalore">Visvesvaraya Industrial & Technological Museum, Bangalore</option>
+                <option value="Birla Industrial & Technological Museum, Kolkata">Birla Industrial & Technological Museum, Kolkata</option>
+                <option value="Nehru Science Centre, Mumbai">Nehru Science Centre, Mumbai</option>
+                <option value="National Gallery of Modern Art, Bangalore">National Gallery of Modern Art, Bangalore</option>
+                <option value="Dakshina Chitra Heritage Museum, Chennai">Dakshina Chitra Heritage Museum, Chennai</option>
+                <option value="NIMHANS Heritage Museum, Bangalore">NIMHANS Heritage Museum, Bangalore</option>
+                <option value="Jaisalmer War Museum, Rajasthan">Jaisalmer War Museum, Rajasthan</option>
+                <option value="Indian Air Force Museum, Delhi">Indian Air Force Museum, Delhi</option>
+            </select>
+
+            <label for="date">Select Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="tickets">Number of Tickets:</label>
+            <input type="number" id="tickets" name="tickets" min="1" max="10" value="1" required>
+
+               <button type="submit">Book Now</button>
+        </form>
+  
+    </div>
+</body>
+</html>
